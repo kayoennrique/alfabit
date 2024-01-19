@@ -4,25 +4,43 @@
 
 @layer base {
   :root {
+    /* Colors */
     --primary: 45, 91, 255;
     --secondary: 98, 132, 253;
     --tertiary: 150, 173, 255;
     --quaternary: 236, 240, 255;
-
+  
     --hover: 27, 74, 240;
     --click: 0, 46, 208;
     --icon: 124, 123, 123;
     --outline: 215, 215, 215;
     --divider: 237, 237, 237;
-
+  
     --bg-light: 255, 255, 255;
     --bg-dark: 248, 248, 248;
     --bg-disabled: 239, 239, 239;
-
+  
     --text-primary: 24, 24, 24;
     --text-secondary: 92, 92, 92;
     --text-tertiary: 116, 116, 116;
     --text-disabled: 138, 138, 138;
+
+    /* Screens */
+    --screen-mobile: 640px;
+    --screen-tablet: 1024px;
+    --screen-desktop: 1440px;
+    --screen-tv: 1920px;
+
+    /* Shadows */
+    --shadow-sm: 0px 0px 10px rgba(132, 132, 132, 15%);
+    --shadow-md: 0px 0px 20px rgba(132, 132, 132, 20%);
+    --shadow-lg: 0px 0px 30px rgba(132, 132, 132, 25%);
+    --shadow-focus: 0px 0px 0px 2px #643296;
+    --shadow-outline: 0px 0px 0px 2px #E8E8E8;
+    --shadow-button-focus: 0px 0px 0px 2px #AF4BFE;
+
+    /* Blur */
+    --blur: 4px;
   }
 
   .theme-violet {
