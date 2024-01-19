@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alphabit
 
-## Getting Started
+Alfabit is an innovative technology company dedicated to providing creative and efficient solutions for its customers. Recognizing the importance of consistent and intuitive design across all its platforms and products, Alfabit decided to invest in a cutting-edge design system.
 
-First, run the development server:
+## 🛠️ Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ npm install
+$ //or
+$ yarn add
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔨 Project
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can find the [Figma for this application here](https://www.figma.com/file/h86gUvqUXTKwgr6tVYinLT/React%3A-Design-System-com-Tailwind?type=design&node-id=0-1&t=GuaFV9cp30SS2di9-0) .
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## ✔️ Techniques and technologies used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Check out this list of everything we will use in this application:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `React`
+- `Next js`
+- `Tailwind CSS`
+- `Storybook`
+- `Class Variance Authority (cva)`
+- `Headless UI`
+- `classnames`
+- `GitHub`
+- `Figma`
 
-## Learn More
+And much more!
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Open and run the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+After cloning or downloading the project, install the dependencies, open it in your favorite IDE (I recommend VS Code) and type `npm run storybook` in the terminal and access the url shown in the terminal.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📚 More course information
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Alfabit's design system is a comprehensive, structured approach that brings together design guidelines, standards and components into a cohesive whole. This initiative allows the company to create digital products with a unified visual identity, offering an exceptionally intuitive and pleasant user experience.
