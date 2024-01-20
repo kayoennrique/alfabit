@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "next": "14.1.0",
