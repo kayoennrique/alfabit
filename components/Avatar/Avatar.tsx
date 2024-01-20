@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React from "react";
-import { UserIcon } from "@heroicons/react/24/outline";
 
 export type AvatarProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg';
@@ -25,7 +24,6 @@ const Avatar = ({ size = 'xs', className, ...rest }: AvatarProps) => {
             )}
             {...rest}
         >
-            <UserIcon className="absolute w-1/2 h-1/2" />
         </div>
     );
 };
