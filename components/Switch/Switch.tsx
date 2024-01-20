@@ -1,14 +1,36 @@
 import { Switch as HeadlessSwitch, type SwitchProps as HeadlessSwithcProps } from "@headlessui/react"
+import { useState } from "react";
+import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export type SwitchProps = {
     defaultEnable?: boolean;
     variant?: 'common' | 'contract';
     disabled?: boolean;
     onChange?: (enabled: boolean) => void;
-}
+} & HeadlessSwithcProps<any>;
 
-const Switch = ({defaultEnable: enabledByDefault, variant= 'common', disabled, onChange}: SwitchProps) => {
-    return <div></div>
+const Switch = ({ defaultEnable: enabledByDefault, variant = 'common', disabled, onChange, ...rest }: SwitchProps) => {
+    const [enabled, setEnabled] = useState(enabledByDefault);
+
+    const toggle = () => {
+        const newState = !enabled
+        setEnabled(newState)
+        onChange?.(newState)
+    }
+
+    return <HeadlessSwitch
+        checked={enabled}
+        onChange={toggle}
+        disabled={disabled}
+        {...rest}
+    >
+        <span>switch toggle</span>
+        {variant === 'common' && <span />}
+        {variant === 'contract' && <span>
+            {enabled && (<CheckIcon aria-disabled={disabled} />)}
+            {enabled || (<XMarkIcon aria-disabled={disabled} />)}
+        </span>}
+    </HeadlessSwitch>
 }
 
 export default Switch;
