@@ -1,22 +1,52 @@
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/react";
 
-import TextBlock, { TextBlockProps } from "./TextBlock"
+import TextBlock, { type TextBlockProps } from "./TextBlock";
 
-const meta: Meta = {
-    title: "Molecules/TextBlock",
-    component: TextBlock,
-    argTypes: {
-        className: {
-            type: "string"
-        }
-    }
-}
+const meta: Meta<TextBlockProps> = {
+  title: "Molecules/TextBlock",
+  component: TextBlock,
+  argTypes: {
+    type: {
+      type: "string",
+    },
+    title: {
+      type: "string",
+    },
+    children: {
+      type: "string",
+    },
+  },
+};
 
-export default meta
+export default meta;
 
 export const Primary: StoryObj<TextBlockProps> = {
-    args: {
-        title: "Title",
-        textBlock: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    }
-}
+  args: {
+    title: "Title",
+    children: "Hello, I'm a standard text block",
+  },
+};
+
+export const TextBlockPrimary: StoryObj<TextBlockProps> = {
+  args: {
+    title: "Title",
+    children: "Hi, I'm a Primary Text block",
+    type: "primary",
+  },
+};
+
+export const TextBlockSecondary: StoryObj<TextBlockProps> = {
+  args: {
+    title: "Title",
+    children: "Hello, I am a Secondary Text block",
+    type: "secondary",
+  },
+};
+
+export const TextBlockTertiary: StoryObj<TextBlockProps> = {
+  args: {
+    title: "Title",
+    children: "Hello, I am a Tertiary Text block",
+    type: "dark",
+  },
+};
