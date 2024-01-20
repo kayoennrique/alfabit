@@ -22,6 +22,19 @@ export const Default: StoryObj<DividerProps> = {
 
 export const DivisorWithProps: StoryObj<DividerProps> = {
   args: {
-    children: "Hello world!",
+    children: "Hello World!",
+  },
+};
+
+export const ThicknessDivisor: StoryObj<DividerProps> = {
+  args: {
+    height: "h-[4px]",
+  },
+};
+
+export const DivisorDark: StoryObj<DividerProps> = {
+  args: {
+    bgColor: "dark",
+    height: "h-1",
   },
 };
