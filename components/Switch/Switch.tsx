@@ -1,36 +1,56 @@
-import { Switch as HeadlessSwitch, type SwitchProps as HeadlessSwithcProps } from "@headlessui/react"
-import { useState } from "react";
-import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
-
-export type SwitchProps = {
+import {
+    Switch as HeadlessSwitch,
+    type SwitchProps as HeadlessSwitchProps,
+  } from "@headlessui/react";
+  import { useState } from "react";
+  import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
+  import useStyle from "./Switch.style";
+  
+  export type SwitchProps = {
     defaultEnable?: boolean;
-    variant?: 'common' | 'contract';
+    variant?: "common" | "contract";
     disabled?: boolean;
     onChange?: (enabled: boolean) => void;
-} & HeadlessSwithcProps<any>;
-
-const Switch = ({ defaultEnable: enabledByDefault, variant = 'common', disabled, onChange, ...rest }: SwitchProps) => {
+  } & HeadlessSwitchProps<any>;
+  
+  const Switch = ({
+    defaultEnable: enabledByDefault,
+    variant = "common",
+    disabled,
+    onChange,
+    ...rest
+  }: SwitchProps) => {
     const [enabled, setEnabled] = useState(enabledByDefault);
-
+    const style = useStyle({ variant, enabled, disabled });
+  
     const toggle = () => {
-        const newState = !enabled
-        setEnabled(newState)
-        onChange?.(newState)
-    }
-
-    return <HeadlessSwitch
+      const newState = !enabled;
+      setEnabled(newState);
+      onChange?.(newState);
+    };
+  
+    return (
+      <HeadlessSwitch
         checked={enabled}
         onChange={toggle}
         disabled={disabled}
+        className={style.Container}
         {...rest}
-    >
-        <span>switch toggle</span>
-        {variant === 'common' && <span />}
-        {variant === 'contract' && <span>
-            {enabled && (<CheckIcon aria-disabled={disabled} />)}
-            {enabled || (<XMarkIcon aria-disabled={disabled} />)}
-        </span>}
-    </HeadlessSwitch>
-}
-
-export default Switch;
+      >
+        <span className="sr-only">switch toggle</span>
+        {variant === "common" && <span className={style.Switch} />}
+        {variant === "contract" && (
+          <span>
+            {enabled && (
+              <CheckIcon className={style.Icon} aria-disabled={disabled} />
+            )}
+            {enabled || (
+              <XMarkIcon className={style.Icon} aria-disabled={disabled} />
+            )}
+          </span>
+        )}
+      </HeadlessSwitch>
+    );
+  };
+  
+  export default Switch;
