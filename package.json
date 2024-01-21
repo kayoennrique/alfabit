@@ -1,5 +1,5 @@
 {
-  "name": "alfabit",
+  "name": "ds-alfabit",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -41,5 +41,15 @@
     "@storybook/theming": "^7.6.10",
     "eslint-plugin-storybook": "^0.6.12",
     "storybook": "^7.6.10"
-  }
+  },
+  "description": "Alfabit is an innovative technology company dedicated to providing creative and efficient solutions for its customers. Recognizing the importance of consistent and intuitive design across all its platforms and products, Alfabit decided to invest in a cutting-edge design system.",
+  "main": "index.ts",
+  "author": "kayoennrique",
+  "license": "ISC",
+  "files": [
+    "styles/globals.css",
+    "tailwind.config.js",
+    "components/*",
+    "fonts/*"
+  ]
 }
