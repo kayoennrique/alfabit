@@ -1,87 +1,88 @@
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/react";
 
-import Button, { ButtonProps } from "./Button"
+import Button, { ButtonProps } from "./Button";
 
 const meta: Meta<ButtonProps> = {
-  title: 'Molecules/Button',
+  title: "Molecules/Button",
   component: Button,
   argTypes: {
     children: {
-      type: "string"
+      type: "string",
     },
     disabled: {
-      type: "boolean"
+      type: "boolean",
     },
     className: {
-      type: "string"
+      type: "string",
     },
-  }
-}
+    onClick: { action: "clicked" },
+  },
+};
 
-export default meta
+export default meta;
 
 export const Primary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action'
-  }
-}
+    children: "Action",
+  },
+};
 
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    disabled: true
-  }
-}
+    children: "Action",
+    disabled: true,
+  },
+};
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    variant: 'secondary'
-  }
-}
+    children: "Action",
+    variant: "secondary",
+  },
+};
 
 export const SecondaryDisabled: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    variant: 'secondary',
-    disabled: true
-  }
-}
+    children: "Action",
+    variant: "secondary",
+    disabled: true,
+  },
+};
 
 export const Tertiary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    variant: 'tertiary'
-  }
-}
+    children: "Action",
+    variant: "tertiary",
+  },
+};
 
 export const TertiaryDisabled: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    variant: 'tertiary',
-    disabled: true
-  }
-}
+    children: "Action",
+    variant: "tertiary",
+    disabled: true,
+  },
+};
 
 export const Violet: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    className: 'theme-violet'
-  }
-}
+    children: "Action",
+    className: "theme-violet",
+  },
+};
 
 export const VioletSecondary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    className: 'theme-violet',
-    variant: 'secondary'
-  }
-}
+    children: "Action",
+    className: "theme-violet",
+    variant: "secondary",
+  },
+};
 
 export const VioletTertiary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Action',
-    className: 'theme-violet',
-    variant: 'tertiary'
-  }
-}
+    children: "Action",
+    className: "theme-violet",
+    variant: "tertiary",
+  },
+};
