@@ -1,13 +1,13 @@
 {
-  "name": "ds-alfabit",
+  "name": "designsystem-alfabit",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006 --no-open",
+    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -43,7 +43,7 @@
     "storybook": "^7.6.10"
   },
   "description": "Alfabit is an innovative technology company dedicated to providing creative and efficient solutions for its customers. Recognizing the importance of consistent and intuitive design across all its platforms and products, Alfabit decided to invest in a cutting-edge design system.",
-  "main": "index.ts",
+  "main": "components/index.ts",
   "author": "kayoennrique",
   "license": "ISC",
   "files": [
