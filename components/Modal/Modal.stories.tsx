@@ -57,3 +57,29 @@ export const ModalInfo: Story = {
     return <ModalStoryInfo {...args} />;
   },
 };
+
+const ModalStoryChoice = (args: ModalProps) => {
+  const [isOpen, setIsOpen] = useState(args.isOpen);
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Typography>Your changes will be lost</Typography>
+        <div className=" flex flex-col gap-3">
+          <Button>Save changes</Button>
+          <Button variant="secondary">Dont save</Button>
+        </div>
+      </Modal>
+    </>
+  );
+};
+
+export const ModalChoice: Story = {
+  args: {
+    isOpen: false,
+    title: "Do you want to save your changes?",
+  },
+  render: (args: ModalProps) => {
+    return <ModalStoryChoice {...args} />;
+  },
+};
